@@ -5,7 +5,7 @@ default: &default
 
 development:
   <<: *default
-  database: myapp_development
+  database: videoapp_development
   username: username
   password: '12345678'
   host: localhost
@@ -13,7 +13,7 @@ development:
 
 test:
   <<: *default
-  database: myapp_test
+  database: videoapp_test
   username: username
   password: '12345678'
   host: localhost
@@ -21,7 +21,7 @@ test:
 
 production:
   <<: *default
-  database: myapp_production
+  database: videoapp_production
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
