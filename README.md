@@ -1,24 +1,63 @@
-# README
+# video-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Enpoints and actions
 
-Things you may want to cover:
+## Open endpoints
 
-* Ruby version
+```
+GET       /api/v1/heath                   Api status
+GET       /api/v1/heath/videos            Video list
+GET       /api/v1/heath/videos/:slug      Show video
+```
 
-* System dependencies
+## Authentication endpoints
 
-* Configuration
+```
+POST      /api/v1/auth                    Registration
+POST      /api/v1/auth/sign_in            Login
+DELETE    /api/v1/auth/sign_out           Logout
+```
 
-* Database creation
+## Authenticated endpoints
 
-* Database initialization
+```
+GET       /api/v1/videos                  Video list
+POST      /api/v1/videos                  Create video
+GET       /api/v1/videos/:slug            Show video
+PUT       /api/v1/videos/:slug            Update video
+DELETE    /api/v1/videos/:slug            Delete video
+```
 
-* How to run the test suite
+## Sign up
+```
+{
+  "name": "name",
+  "email": "email@email.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## Login
+```
+{
+  "email": "email@email.com",
+  "password": "password"
+}
+```
 
-* Deployment instructions
+## Headers
+```
+access-token
+client
+uid
+```
 
-* ...
+## Create / Update video
+```
+{
+  "name": "video name",
+  "description": "video description",
+  "url": "video url"
+}
+```
