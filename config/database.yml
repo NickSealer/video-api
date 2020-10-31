@@ -1,3 +1,33 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#
+# development:
+#   <<: *default
+#   database: videoapp_development
+#   username: username
+#   password: '12345678'
+#   host: localhost
+#   port: 5432
+#
+# test:
+#   <<: *default
+#   database: videoapp_test
+#   username: username
+#   password: '12345678'
+#   host: localhost
+#   port: 5432
+#
+# production:
+#   <<: *default
+#   database: videoapp_production
+#   username: myapp
+#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+
+
+# PARA HEROKU
+# Postgreslq configs
 default: &default
   adapter: postgresql
   encoding: unicode
@@ -6,43 +36,13 @@ default: &default
 development:
   <<: *default
   database: videoapp_development
-  username: username
-  password: '12345678'
-  host: localhost
-  port: 5432
 
 test:
   <<: *default
   database: videoapp_test
-  username: username
-  password: '12345678'
-  host: localhost
-  port: 5432
 
 production:
   <<: *default
   database: videoapp_production
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
-
-
-# PARA HEROKU
-# Postgreslq configs
-# default: &default
-#   adapter: postgresql
-#   encoding: unicode
-#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-#
-# development:
-#   <<: *default
-#   database: myapp_development
-#
-# test:
-#   <<: *default
-#   database: myapp_test
-#
-# production:
-#   <<: *default
-#   database: myapp_production
-#   username: myapp
-#   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
