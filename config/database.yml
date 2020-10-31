@@ -35,14 +35,14 @@ default: &default
 
 development:
   <<: *default
-  database: videoapp_development
+  database: myapp_development
 
 test:
   <<: *default
-  database: videoapp_test
+  database: myapp_test
 
 production:
   <<: *default
-  database: videoapp_production
+  database: myapp_production
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
